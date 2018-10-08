@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Google Music Search</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--MATERIALIZE CSS
+    --------------------------------------------------------------------->
+    <link rel="stylesheet" href="css/google_fonts.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+
+    <!--MY CSS
+    ------------------------------------------------------------------->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/player.css">
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="teal lighten-3" role="navigation">
+    <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">MusicSearcher</a>
+
+        <ul class="right hide-on-med-and-down">
+            <li><a href="https://soundcloud.com/dimamon">Soundcloud</a></li>
+            <li><a href="https://t.me/GoogleMusicFinderBot">Google Music Finder Bot</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+            <li><a href="https://soundcloud.com/dimamon">Soundcloud</a></li>
+            <li><a href="https://t.me/GoogleMusicFinderBot">Google Music Finder Bot</a></li>
+        </ul>
+
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a>
+    </div>
+</nav>
+
+<!-- Search input-->
+<div id="searchBar" class="container">
+    <div class="row">
+        <div class="row">
+
+            <div class="input-field col s8">
+                <i class="material-icons prefix">search</i>
+                <input id="searchInput" type="text" class="validate">
+                <label for="searchInput">Track name</label>
+            </div>
+
+            <div class="input-field col s4">
+                <button id="searchBtn" class="btn waves-effect waves-light">Search
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Result -->
+<div id="result" class="container">
+
+    <div class='music-card playing'>
+        <div id="cover" class='image'></div>
+        <div class='wave'></div>
+        <div class='wave'></div>
+        <div class='wave'></div>
+
+
+        <div class='info'>
+            <h2 id="playerTitle" class='title'></h2>
+            <div id="playerArtist" class='artist'></div>
+        </div>
+    </div>
+
+    <div id="controls" class="row">
+        <div class="col s3">
+            <i class="fa fa-pause trigger" aria-hidden="true">
+                <i class="material-icons medium prefix">play_circle_filled</i>
+            </i>
+            <i class="fa fa-play trigger" aria-hidden="true">
+                <i class="material-icons medium prefix">pause_circle_filled</i>
+            </i>
+        </div>
+        <div class="col s9">
+            <p id="resultTrackArtist"></p>
+            <p id="resultTrackName"></p>
+            <br>
+        </div>
+    </div>
+
+    <div id="links" class="row">
+        <div class="col s6">
+            <a id="resultAlbumLink">ALBUM ON GOOGLE MUSIC</a>
+        </div>
+
+        <div class="col s6">
+            <a id="resultTrackLink">DOWNLOAD LINK</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- SCRIPTS -->
+<script src="scripts/script.js"></script>
+<script src="scripts/jquery-2.1.1.min.js"></script>
+<script src="scripts/materialize.min.js"></script>
+<script src="scripts/player.js"></script>
+<script src="scripts/init.js"></script>
+</body>

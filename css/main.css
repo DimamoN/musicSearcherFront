@@ -1,0 +1,16 @@
+body {
+     background-image: url(../img/background.jpg);
+}
+
+#resultTrackName {
+  font-size: 120%;
+  margin-bottom: 0px;
+}
+
+#searchBar {
+  margin-top: 20px;
+}
+
+#controls {
+  margin-bottom: 5px;
+}
