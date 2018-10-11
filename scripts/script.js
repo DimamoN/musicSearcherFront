@@ -13,14 +13,6 @@ let resultTrackLinkIndicator = document.getElementById('resultTrackLinkIndicator
 let resultTrackArtist = document.getElementById('resultTrackArtist');
 let resultTrackName = document.getElementById('resultTrackName');
 
-let audioPlayer = document.getElementById('audioPlayer');
-let player = document.getElementById('player');
-
-// NEW PLAYER
-let playerTitle = document.getElementById('playerTitle');
-let playerArtist = document.getElementById('playerArtist');
-let coverArt = document.getElementById('cover');
-
 let audio = new Audio('');
 
 // Execute a function when the user releases a key on the keyboard
@@ -38,7 +30,7 @@ searchInput.addEventListener("keyup", function (event) {
 window.addEventListener("keyup", function(event) {
 
   // disable if focus is on input
-  if (document.activeElement == searchInput) {
+  if (document.activeElement === searchInput) {
     return;
   }
 
@@ -81,19 +73,8 @@ function showMessage(response) {
         const result = JSON.parse(response);
         console.log("Response:" + result);
 
-        // audioPlayer.src = result.streamUrl;
-        // player.load();
-        //
         resultTrackLink.href = result.streamUrl;
-        // resultTrackLink.innerHTML = "Track: " + result.trackName;
-        //
         resultAlbumLink.href = result.albumUrl;
-        // resultAlbumLink.innerHTML = "Album: " + result.albumName;
-        // // resultTrackLinkIndicator.innerHTML = "Track found";
-
-        // new player
-        // playerTitle.innerHTML = result.trackName;
-        // playerArtist.innerHTML = result.artistName;
 
         // below player
         resultTrackArtist.innerHTML = result.artistName;
@@ -116,7 +97,7 @@ function showMessage(response) {
     }
 }
 
-// TODO: MOVE TO PLAYER.jS
+// Player control
 
 function playStop() {
   if (audio.paused === false) {

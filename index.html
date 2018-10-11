@@ -22,15 +22,15 @@
 <!-- Navigation -->
 <nav class="teal lighten-3" role="navigation">
     <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">MusicSearcher</a>
+        <a id="logo-container" href="#" class="brand-logo">Music Searcher</a>
 
         <ul class="right hide-on-med-and-down">
-            <li><a href="https://soundcloud.com/dimamon">Soundcloud</a></li>
+            <li><a href="https://soundcloud.com/dimamon">My SoundСloud</a></li>
             <li><a href="https://t.me/GoogleMusicFinderBot">Google Music Finder Bot</a></li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
-            <li><a href="https://soundcloud.com/dimamon">Soundcloud</a></li>
+            <li><a href="https://soundcloud.com/dimamon">My SoundСloud</a></li>
             <li><a href="https://t.me/GoogleMusicFinderBot">Google Music Finder Bot</a></li>
         </ul>
 
@@ -76,7 +76,11 @@
         </div>
     </div>
 
+    <!--Controls-->
     <div id="controls" class="row">
+
+        <!--Play / Stop
+        --------------------------------------------------------------------->
         <div class="col s3">
             <i class="fa fa-pause trigger" aria-hidden="true">
                 <i class="material-icons medium prefix">play_circle_filled</i>
@@ -85,6 +89,7 @@
                 <i class="material-icons medium prefix">pause_circle_filled</i>
             </i>
         </div>
+
         <div class="col s9">
             <p id="resultTrackArtist"></p>
             <p id="resultTrackName"></p>
@@ -92,11 +97,11 @@
         </div>
     </div>
 
+    <!--Links-->
     <div id="links" class="row">
         <div class="col s6">
             <a id="resultAlbumLink">ALBUM ON GOOGLE MUSIC</a>
         </div>
-
         <div class="col s6">
             <a id="resultTrackLink">DOWNLOAD LINK</a>
         </div>
@@ -104,10 +109,9 @@
 
 </div>
 
-<!-- SCRIPTS -->
+<!-- Scripts -->
 <script src="scripts/script.js"></script>
 <script src="scripts/jquery-2.1.1.min.js"></script>
 <script src="scripts/materialize.min.js"></script>
-<script src="scripts/player.js"></script>
 <script src="scripts/init.js"></script>
 </body>
