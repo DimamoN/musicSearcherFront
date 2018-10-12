@@ -13,9 +13,13 @@ let resultTrackLinkIndicator = document.getElementById('resultTrackLinkIndicator
 let resultTrackArtist = document.getElementById('resultTrackArtist');
 let resultTrackName = document.getElementById('resultTrackName');
 
+// controls
+let play = document.getElementById("play");
+let pause = document.getElementById("pause");
+
 let audio = new Audio('');
 
-// Execute a function when the user releases a key on the keyboard
+// execute a function when the user releases a key on the keyboard
 searchInput.addEventListener("keyup", function (event) {
     // Cancel the default action, if needed
     event.preventDefault();
@@ -40,6 +44,9 @@ window.addEventListener("keyup", function(event) {
       playStop();
     }
 });
+
+play.addEventListener("click", (event) => playStop());
+pause.addEventListener("click", (event) => playStop());
 
 
 let HttpClient = function () {
